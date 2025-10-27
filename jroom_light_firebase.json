@@ -1,0 +1,18 @@
+{
+    "BOMBA": {
+      "bomba1": true,
+      "start": "00:00",
+      "stop": "00:50"
+    },
+    "SETOR1": {
+      "setor1": true,
+      "start": "00:00",
+      "stop": "00:10"
+    },
+    "Temp": 30.5,
+    "Umid": 40,
+    "WIFI": {
+      "Sinal": "Sitio Recanto Dos Ipês: 18% - -78dBm - 14:33:58"
+    }
+  }
+ 
