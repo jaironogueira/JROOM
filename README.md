@@ -17,7 +17,7 @@
 
 ## 🧠 Tecnologias Utilizadas
 
-- **ESP32** - Microcontrolador com conexão a internet.
+- **ESP32 - SENSOR DHT11 - MODULO RELÊ** - Microcontrolador com conexão a internet, sensor de temperatura e umidade, módulo relê para controle de dispositivos.
 - **FIREBASE** — Comunicação entre dispositivo ESP32 e Banco de dados em Tempo Real.  
 - **Node-RED** — Automação e interface gráfica na web.  
 - **JavaScript** — Scripts de controle e integração de dados.
