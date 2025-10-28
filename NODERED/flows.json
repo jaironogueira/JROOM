@@ -1,0 +1,1196 @@
+[
+    {
+        "id": "623a9227223a81ce",
+        "type": "ui-switch",
+        "z": "da06e2c1fa126fb0",
+        "name": "bombaStatus",
+        "label": "Status",
+        "group": "11c60b55f8eda5a6",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "0d330886aedbb9d5"
+            ]
+        ]
+    },
+    {
+        "id": "262e28f861a3f353",
+        "type": "ui-text-input",
+        "z": "da06e2c1fa126fb0",
+        "group": "11c60b55f8eda5a6",
+        "name": "bombaStart",
+        "label": "Start",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "da47cf2262b4df52"
+            ]
+        ]
+    },
+    {
+        "id": "f7771d8ee80a970d",
+        "type": "ui-text-input",
+        "z": "da06e2c1fa126fb0",
+        "group": "11c60b55f8eda5a6",
+        "name": "bombaStop",
+        "label": "Stop",
+        "order": 3,
+        "width": "5",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "7d43b24662ad6c5f"
+            ]
+        ]
+    },
+    {
+        "id": "0d330886aedbb9d5",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "BOMBA/bomba1",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 960,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "da47cf2262b4df52",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "BOMBA/start",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 950,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7d43b24662ad6c5f",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "BOMBA/stop",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 950,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a3604fe759972f07",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "SETOR1/setor1",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "5760525370d461d9"
+            ]
+        ]
+    },
+    {
+        "id": "1c0971a9fa4fb9f5",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "SETOR1/start",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "e4a8b0275232fcd5"
+            ]
+        ]
+    },
+    {
+        "id": "3ffbb11faf0b5ae0",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "SETOR1/stop",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "5e4e9df5d0160aca"
+            ]
+        ]
+    },
+    {
+        "id": "5760525370d461d9",
+        "type": "ui-switch",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "label": "Setor 1",
+        "group": "b229dca214873b46",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 760,
+        "y": 400,
+        "wires": [
+            [
+                "722b5f014b26d837"
+            ]
+        ]
+    },
+    {
+        "id": "e4a8b0275232fcd5",
+        "type": "ui-text-input",
+        "z": "da06e2c1fa126fb0",
+        "group": "b229dca214873b46",
+        "name": "",
+        "label": "Start",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "9de8636beb910ff3"
+            ]
+        ]
+    },
+    {
+        "id": "5e4e9df5d0160aca",
+        "type": "ui-text-input",
+        "z": "da06e2c1fa126fb0",
+        "group": "b229dca214873b46",
+        "name": "",
+        "label": "Stop",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "ae38f614bc0602af"
+            ]
+        ]
+    },
+    {
+        "id": "722b5f014b26d837",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "SETOR1/setor1",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 960,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "9de8636beb910ff3",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "SETOR1/start",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 950,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ae38f614bc0602af",
+        "type": "firebase-out",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "database": "eb8a115cb7878c0a",
+        "path": "SETOR1/stop",
+        "pathType": "str",
+        "priority": "1",
+        "queryType": "set",
+        "x": 950,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d0f880669b0650cf",
+        "type": "ui-chart",
+        "z": "da06e2c1fa126fb0",
+        "group": "fbc48a6a37f39b5e",
+        "name": "",
+        "label": "Temperatura",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "12",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#00ff1e",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "12",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 750,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bae973f482102cf",
+        "type": "ui-chart",
+        "z": "da06e2c1fa126fb0",
+        "group": "fbc48a6a37f39b5e",
+        "name": "",
+        "label": "Umidade",
+        "order": 5,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "dash",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "2",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#11ff00",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "12",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 740,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72c81a79ac1dcab8",
+        "type": "ui-text",
+        "z": "da06e2c1fa126fb0",
+        "group": "fbc48a6a37f39b5e",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Sinal:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#11ff00",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 810,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "bfa1bcff564ea090",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "WIFI/Sinal",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 590,
+        "y": 900,
+        "wires": [
+            [
+                "72c81a79ac1dcab8"
+            ]
+        ]
+    },
+    {
+        "id": "381b3f65741af6b5",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": true,
+        "path": "/Temp",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "d0f880669b0650cf"
+            ]
+        ]
+    },
+    {
+        "id": "f4ae1c5d16617c85",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "/Umid",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 570,
+        "y": 760,
+        "wires": [
+            [
+                "1bae973f482102cf"
+            ]
+        ]
+    },
+    {
+        "id": "37160f9dbde6be4a",
+        "type": "inject",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "num",
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "381b3f65741af6b5",
+                "f4ae1c5d16617c85",
+                "bfa1bcff564ea090",
+                "c63822b02961a73b"
+            ]
+        ]
+    },
+    {
+        "id": "a818df57577d134c",
+        "type": "ui-chart",
+        "z": "da06e2c1fa126fb0",
+        "group": "fbc48a6a37f39b5e",
+        "name": "",
+        "label": "VPD",
+        "order": 6,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "2",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#00ff1e",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "12",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 730,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c63822b02961a73b",
+        "type": "function",
+        "z": "da06e2c1fa126fb0",
+        "name": "function 25",
+        "func": "let vpd = global.get(\"vpd\");\nmsg.payload=vpd;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 820,
+        "wires": [
+            [
+                "a818df57577d134c"
+            ]
+        ]
+    },
+    {
+        "id": "fde663d7418005fb",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "/Umid",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 570,
+        "y": 1120,
+        "wires": [
+            [
+                "9d3d98c62852e073",
+                "6fc93db99ff0f6e5"
+            ]
+        ]
+    },
+    {
+        "id": "9cf04c354ee053be",
+        "type": "ui-gauge",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "group": "fbc48a6a37f39b5e",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "units": "C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#1e00ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#35e7f3",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "25",
+                "color": "#06fe72",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#ffeb0a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#ff0000",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 770,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d3d98c62852e073",
+        "type": "ui-gauge",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "group": "fbc48a6a37f39b5e",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Umidade",
+        "alwaysShowTitle": false,
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#fe0101",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#ff0000",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffeb0a",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#06fe72",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "90",
+                "color": "#35e7f3",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 760,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b6019b03ea12e7e",
+        "type": "inject",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "num",
+        "x": 300,
+        "y": 1100,
+        "wires": [
+            [
+                "fde663d7418005fb",
+                "6f534ea9476736f3",
+                "3e9e96700c196ae0"
+            ]
+        ]
+    },
+    {
+        "id": "6f534ea9476736f3",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": true,
+        "path": "/Temp",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 570,
+        "y": 1060,
+        "wires": [
+            [
+                "9cf04c354ee053be",
+                "ee87b8ad2e27aefc"
+            ]
+        ]
+    },
+    {
+        "id": "3e9e96700c196ae0",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "json",
+        "passThrough": false,
+        "path": "",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 570,
+        "y": 1180,
+        "wires": [
+            [
+                "2c9545f0dbbfc0c4"
+            ]
+        ]
+    },
+    {
+        "id": "2c9545f0dbbfc0c4",
+        "type": "function",
+        "z": "da06e2c1fa126fb0",
+        "name": "function 27",
+        "func": "// Função para calcular a pressão de saturação (es)\nfunction calcEs(temperature) {\n    return 0.6108 * Math.exp((17.27 * temperature) / (temperature + 237.3));\n}\n\n// Recupera os valores de temperatura e umidade\nlet temp = msg.payload.Temp;// Temperatura em Celsius\nlet humidity =  msg.payload.Umid; // Umidade relativa em %\n\nif (temp && humidity) {\n    let es = calcEs(temp); // Pressão de saturação\n    let vpd = (1 - humidity / 100) * es; // Calcula o VPD\n\n    msg.payload = parseFloat(vpd.toFixed(2)); // Envia o VPD calculado\n    global.set(\"vpd\", parseFloat(vpd.toFixed(2)));\n    return msg;\n} else {\n    return null; // Caso os dados não estejam completos\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1180,
+        "wires": [
+            [
+                "a17375b96281da8f"
+            ]
+        ]
+    },
+    {
+        "id": "a17375b96281da8f",
+        "type": "ui-gauge",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "group": "fbc48a6a37f39b5e",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "VPD",
+        "alwaysShowTitle": false,
+        "units": "kPA",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#3700ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "0.8",
+                "color": "#f9f106",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "0.9",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1.3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "2",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 930,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fc93db99ff0f6e5",
+        "type": "function",
+        "z": "da06e2c1fa126fb0",
+        "name": "function 28",
+        "func": "var umid = parseFloat(msg.payload);\n global.set(\"UMIDADE\", umid);\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee87b8ad2e27aefc",
+        "type": "function",
+        "z": "da06e2c1fa126fb0",
+        "name": "function 26",
+        "func": "var temp = parseFloat(msg.payload);\n global.set(\"TEMPERATURA\", temp);\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90834788f513b7a0",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "BOMBA/bomba1",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "623a9227223a81ce"
+            ]
+        ]
+    },
+    {
+        "id": "2ede1484b6a82b39",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "BOMBA/start",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "262e28f861a3f353"
+            ]
+        ]
+    },
+    {
+        "id": "4efc8f594c483a6a",
+        "type": "firebase-get",
+        "z": "da06e2c1fa126fb0",
+        "name": "",
+        "constraints": {},
+        "database": "eb8a115cb7878c0a",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "BOMBA/stop",
+        "pathType": "str",
+        "useConstraints": false,
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "f7771d8ee80a970d"
+            ]
+        ]
+    },
+    {
+        "id": "11c60b55f8eda5a6",
+        "type": "ui-group",
+        "name": "jroom-light-bomba",
+        "page": "166abe92d029d660",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "eb8a115cb7878c0a",
+        "type": "firebase-config",
+        "name": "jroom",
+        "authType": "email",
+        "claims": {},
+        "createUser": false,
+        "status": {
+            "firestore": false,
+            "storage": false
+        },
+        "useClaims": false
+    },
+    {
+        "id": "b229dca214873b46",
+        "type": "ui-group",
+        "name": "jroom-light-setor",
+        "page": "166abe92d029d660",
+        "width": "12",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fbc48a6a37f39b5e",
+        "type": "ui-group",
+        "name": "jroom-light-leituras",
+        "page": "166abe92d029d660",
+        "width": "12",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "166abe92d029d660",
+        "type": "ui-page",
+        "name": "jroom-light",
+        "ui": "f77d51740a0b9501",
+        "path": "/jroom-light",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "15d08cd4102614f2",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f77d51740a0b9501",
+        "type": "ui-base",
+        "name": "JROOM",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": "5",
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "15d08cd4102614f2",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#000000",
+            "primary": "#00ff11",
+            "bgPage": "#000000",
+            "groupBg": "#000000",
+            "groupOutline": "#36fa00"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    }
+]
